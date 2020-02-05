@@ -1,4 +1,4 @@
-#### Jacques Debar
+#### Jacques DeBar
 jacques.debar@gmail.com
 
 #### Javaria Yousuf
