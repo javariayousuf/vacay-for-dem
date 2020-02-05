@@ -1,5 +1,5 @@
 # Vacay for Democracy Web App
-_Authors: Javaria Yousef, Marcus Huang, Phoebe Ng, & Jacques DeBar_
+_Authors: Jacques DeBar, Javaria Yousuf, Marcus Huang, Phoebe Ng_
 
 ## Project Overview
 This project is a UW iSchool Capstone Project and a collaboration with [CP Next](https://cpnxt.org/). Specifically, we are partnering with CP Next in their [Vacay for Democracy](https://vacayfordemocracy.com/) initiative to mobilize politically-active citizens in liberal areas to travel to battleground states and get out the vote through canvassing. In order to do this efficiently and effectively, Vacay for Democracy requires a web portal to register, onboard, train, and communicate with volunteers. By having a polished and informative online experience for volunteers, Vacay for Democracy can establish credibility with their target audience and further facilitate their mission.
