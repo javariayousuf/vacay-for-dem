@@ -1,11 +1,11 @@
-####Jacques Debar
+#### Jacques Debar
 jacques.debar@gmail.com
 
-####Javaria Yousuf
+#### Javaria Yousuf
 yousujav@uw.edu
 
-####Marcus Huang
+#### Marcus Huang
 mtghuang@uw.edu
 
-####Phoebe Ng
+#### Phoebe Ng
 png8@uw.edu
