@@ -41,7 +41,7 @@ export default function Footer() {
           alignItems: "center",
           height: "100%",
         }}>
-        <Grid container spacing={6} className={classes.gridContainer}>
+        <Grid container className={classes.gridContainer}>
         <Grid item xs={12} md={6} className={classes.emailContainer}>
             <h2>Join the list</h2>
             <p>Need more information? Subscribe to our monthly newsletter to recieve updates
