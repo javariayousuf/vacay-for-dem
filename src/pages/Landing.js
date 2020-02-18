@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
+import CapstoneInfo from "../components/CapstoneInfo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -172,6 +173,9 @@ export default function Landing() {
           <Button variant="contained" color="primary" size="large">
             Sign Up
           </Button>
+        </Box>
+        <Box className={classes.row}>
+          <CapstoneInfo />
         </Box>
       </Box>
     </div>
