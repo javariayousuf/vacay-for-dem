@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vacay-for-dem/precache-manifest.797a28ebb6d212b7ab2acc402b41382e.js"
+  "/vacay-for-dem/precache-manifest.ae909b7b2b3395f52dd93aa16863000c.js"
 );
 
 self.addEventListener('message', (event) => {
