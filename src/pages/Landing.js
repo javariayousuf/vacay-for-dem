@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   hero: {
     height: "80vh",
     backgroundImage: `url(
-      "https://i.imgur.com/lrCyV4b.jpg"
+      "https://i.imgur.com/EdSdjKf.png"
     )`,
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
   },
   demImg: {
     height: "300px",
-    width: "300px",
+    width: "auto",
     marginRight: "20px",
     marginLeft: "20px"
   },
@@ -132,7 +132,7 @@ export default function Landing() {
           </div>
           <img
             className={classes.demImg}
-            src="https://sloanreview.mit.edu/wp-content/uploads/2019/08/GEN-Freeman-Aug-2400.jpg"
+            src="https://i.imgur.com/9zii9E7.jpg"
             alt="democracy"
           />
         </Box>
@@ -148,7 +148,7 @@ export default function Landing() {
         >
           <img
             className={classes.demImg}
-            src="https://sloanreview.mit.edu/wp-content/uploads/2019/08/GEN-Freeman-Aug-2400.jpg"
+            src="https://i.imgur.com/P2fgX4h.jpg"
             alt="democracy"
           />
           <div className={classes.textBox}>
