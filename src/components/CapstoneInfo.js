@@ -21,7 +21,7 @@ export default function CapstoneInfo() {
     <Box className={classes.root}>
       <h2>About Us</h2>
       <p>
-        This project is part of a
+        This project is part of a 
         <a href="https://ischool.uw.edu/capstone">Capstone Project course</a> at
         the University of Washington Information School.
       </p>
