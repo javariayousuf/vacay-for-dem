@@ -27,11 +27,12 @@ const useStyles = makeStyles(theme => ({
   },
   heroTitle: {
     textTransform: "uppercase",
-    fontSize: "72px",
+    fontSize: "70px",
     margin: "0px"
   },
   heroText: {
-    fontSize: "32px",
+    fontSize: "30px",
+    fontWeight: 'bold',
     margin: "0px",
     marginBottom: "16px"
   },
@@ -45,12 +46,12 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "40px"
   },
   textBox: {
-    width: "400px",
-    marginRight: "20px",
-    marginLeft: "20px"
+    width: "475px",
+    marginRight: "15px",
+    marginLeft: "10px"
   },
   demImg: {
-    height: "300px",
+    height: "325px",
     width: "auto",
     marginRight: "20px",
     marginLeft: "20px"
@@ -77,7 +78,7 @@ export default function Landing() {
       >
         <h1 className={classes.heroTitle}>Vacay for Democracy</h1>
         <p className={classes.heroText}>
-          Work hard, play hard for the future of our country
+        Empowering voters where it matters most.
         </p>
         <Button
           variant="contained"
@@ -106,7 +107,6 @@ export default function Landing() {
             alignItems: "center"
           }}
         >
-          <h1>What do we do?</h1>
         </Box>
         <Box
           className={classes.row}
@@ -119,6 +119,7 @@ export default function Landing() {
           }}
         >
           <div className={classes.textBox}>
+          <h1>Why Vacay for Democracy?</h1>
             <p>
               In 2016, 131.7 million out of 213 million eligible voters in the
               United States cast a ballot in the presidential election; a
@@ -155,17 +156,16 @@ export default function Landing() {
             <p>
               Democracy is based on the principle of “people’s sovereignty”, in
               other words, citizens in America can form and diffuse authority of
-              their government through their elected representatives. Democracy
-              allows citizens to have a voice in decision-making and guarantees
+              their government through their elected representatives. 
+            </p>
+            <p>
+              Democracy allows citizens to have a voice in decision-making and guarantees
               enhanced livelihoods for it’s people. The only way to achieve
               democracy is for all citizens to participate in their elections
               and make informed decisions that impact their lives and our
-              communities.
-            </p>
-            <p>
-              Vacay for Democracy sends canvassers to swing states, working to
+              communities. <b>Vacay for Democracy sends canvassers to swing states, working to
               equip voters with the tools and information they need to vote with
-              confidence in the 2020 election.
+              confidence in the 2020 election.</b>
             </p>
           </div>
         </Box>
