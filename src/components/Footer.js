@@ -42,14 +42,14 @@ export default function Footer() {
           height: "100%"
         }}
       >
-        <Grid container spacing={0} className={classes.gridContainer}>
+        <Grid container className={classes.gridContainer}>
           <Grid item xs={12} md={6} className={classes.emailContainer}>
             <h2>Join the list</h2>
             <p>
               Need more information? Subscribe to our monthly newsletter to
               recieve updates
               <br />
-              on upcoming trips and the latest from Common Purpose.
+              on upcoming trips and the latest from Vacay for Democracy.
               <br />
               <input
                 type="email"
@@ -66,9 +66,7 @@ export default function Footer() {
             <p>
               1411 4th Avenue Suite 1000
               <br />
-              Seattle, WA
-              <br />
-              98101
+              Seattle, WA 98101
             </p>
             <p>
               <a
@@ -76,7 +74,7 @@ export default function Footer() {
                 target="_top"
                 className={classes.links}
               >
-                hello@commonpurposenow.org
+                hello@cpnxt.org
               </a>
             </p>
           </Grid>
