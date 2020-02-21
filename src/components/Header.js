@@ -32,10 +32,11 @@ const useStyles = makeStyles(theme => ({
   signUpButton: {
     justifyContent: "right",
     margin: "10px",
-    backgroundColor: "#00B0F0",
-    color: "#ffffff",
+    backgroundColor: "#014378",
+    fontWeight: 'bold',
+    color: "#FFFFFF",
     '&:hover': {
-      backgroundColor: "#73d4f5"
+      color: "#014378",
     }
   }
 }));

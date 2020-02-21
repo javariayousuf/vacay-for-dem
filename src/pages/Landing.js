@@ -1,18 +1,82 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import Element from "../components/Element";
+import Button from "@material-ui/core/Button";
+import CapstoneInfo from "../components/CapstoneInfo";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    height: "999px"
+    flexGrow: 1
   },
   ex: {
     height: "850px",
     width: "400px",
     border: "3px solid ##333",
-    backgroundColor: "#eee"
+    backgroundColor: "#eee",
+    margin: "20px"
+  },
+  hero: {
+    height: "80vh",
+    backgroundImage: `url(
+      "https://i.imgur.com/EdSdjKf.png"
+    )`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    color: "white"
+  },
+  heroTitle: {
+    textTransform: "uppercase",
+    fontSize: "70px",
+    margin: "0px"
+  },
+  heroText: {
+    fontSize: "30px",
+    fontWeight: 'bold',
+    margin: "0px",
+    marginBottom: "16px"
+  },
+  row: {
+    marginBottom: "40px"
+  },
+  textBox: {
+    width: "475px",
+    marginRight: "15px",
+    marginLeft: "10px"
+  },
+  demImg: {
+    height: "325px",
+    width: "auto",
+    marginRight: "20px",
+    marginLeft: "20px"
+  },
+  heading: {
+    margin: "0px",
+    marginTop: "20px"
+  },
+  missionParagraph: {
+    fontWeight: 'bold',
+    color: '#FF8C00'
+  },
+  signUpButtonTop: {
+    marginTop: '15px',
+    backgroundColor: '#014378',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    height: "60px",
+    width: "100px",
+    fontSize: '17px'
+  },
+  h1: {
+    color: '#014378'
+  },
+  signUpButtonBottom: {
+    backgroundColor: '#014378',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    height: "65px",
+    width: "110px",
+    fontSize: '15px'
   }
 }));
 
@@ -22,50 +86,115 @@ export default function Landing() {
   return (
     <div className={classes.root}>
       <Box
-        className={classes.root}
+        className={classes.hero}
         style={{
           display: "flex",
-          flexDirection: "vertical",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center"
         }}
       >
-        <div className={classes.ex}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem
-          integer vitae justo eget magna fermentum iaculis. A condimentum vitae
-          sapien pellentesque. At imperdiet dui accumsan sit amet. Ullamcorper
-          malesuada proin libero nunc consequat interdum varius sit. Mus mauris
-          vitae ultricies leo. Orci sagittis eu volutpat odio facilisis mauris
-          sit amet massa. Erat pellentesque adipiscing commodo elit at imperdiet
-          dui accumsan. Velit dignissim sodales ut eu sem integer. Ut consequat
-          semper viverra nam libero justo laoreet sit. Purus sit amet volutpat
-          consequat. Nulla facilisi nullam vehicula ipsum a. Nisi porta lorem
-          mollis aliquam ut porttitor leo a. Interdum varius sit amet mattis
-          vulputate enim nulla. Lorem sed risus ultricies tristique nulla
-          aliquet enim. Nec sagittis aliquam malesuada bibendum arcu. Tempus
-          iaculis urna id volutpat lacus laoreet non curabitur. Hac habitasse
-          platea dictumst quisque sagittis purus sit amet. Et netus et malesuada
-          fames ac turpis egestas. Sed egestas egestas fringilla phasellus
-          faucibus. Duis at consectetur lorem donec massa. Mi ipsum faucibus
-          vitae aliquet nec. Eget mi proin sed libero enim. Nisl pretium fusce
-          id velit ut tortor. Nunc id cursus metus aliquam eleifend mi in. Quam
-          pellentesque nec nam aliquam sem et tortor consequat. Cras pulvinar
-          mattis nunc sed blandit. Adipiscing diam donec adipiscing tristique
-          risus nec feugiat. Vitae turpis massa sed elementum tempus egestas.
-          Tempor commodo ullamcorper a lacus. Viverra tellus in hac habitasse
-          platea dictumst. Sed adipiscing diam donec adipiscing tristique risus
-          nec feugiat. Vitae proin sagittis nisl rhoncus. At consectetur lorem
-          donec massa sapien faucibus et molestie. Tempus imperdiet nulla
-          malesuada pellentesque elit eget gravida cum. Gravida dictum fusce ut
-          placerat orci nulla. At quis risus sed vulputate odio ut enim blandit.
-          Congue eu consequat ac felis donec et odio. Diam maecenas sed enim ut
-          sem viverra. Imperdiet massa tincidunt nunc pulvinar sapien et.
-          Habitasse platea dictumst quisque sagittis purus. Aliquam eleifend mi
-          in nulla posuere. Nunc faucibus a pellentesque sit amet porttitor
-          eget. Scelerisque in dictum non consectetur a. Arcu non sodales neque
-          sodales.
-        </div>
+        <h1 className={classes.heroTitle}>Vacay for Democracy</h1>
+        <p className={classes.heroText}>
+        Empowering voters where it matters most.
+        </p>
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.signUpButtonTop}
+        >
+          Sign Up
+        </Button>
+      </Box>
+      <Box
+        className={classes.root}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <Box
+          className={classes.heading}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+        </Box>
+        <Box
+          className={classes.row}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <div className={classes.textBox}>
+          <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
+            <p>
+              In 2016, 131.7 million out of 213 million eligible voters in the
+              United States cast a ballot in the presidential election; a
+              turnout rate of 57%, with even lower rates in swing states.
+              Studies show disinterest and apathy played a large role in why
+              eligible Americans chose to forfeit their vote. Experts believe
+              that some Americans are politically disengaged due to lack of
+              education about the importance of democracy and candidates running
+              for election.
+            </p>
+          </div>
+          <img
+            className={classes.demImg}
+            src="https://i.imgur.com/9zii9E7.jpg"
+            alt="democracy"
+          />
+        </Box>
+        <Box
+          className={classes.row}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap-reverse",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <img
+            className={classes.demImg}
+            src="https://i.imgur.com/P2fgX4h.jpg"
+            alt="democracy"
+          />
+          <div className={classes.textBox}>
+            <p>
+              Democracy is based on the principle of “people’s sovereignty”, in
+              other words, citizens in America can form and diffuse authority of
+              their government through their elected representatives. Democracy allows citizens to have a voice in 
+              decision-making and guarantees enhanced livelihoods for it’s people. The only way to achieve
+              democracy is for all citizens to participate in their elections
+              and make informed decisions that impact their lives and our
+              communities.
+            </p>
+            <p className={classes.missionParagraph}>
+             Vacay for Democracy sends canvassers to swing states, working to
+              equip voters with the tools and information they need to vote with
+              confidence in the 2020 election.
+            </p>
+          </div>
+        </Box>
+        <Box className={classes.row}>
+          <Button variant="contained" size="large" className={classes.signUpButtonBottom}>
+            Sign Up
+          </Button>
+        </Box>
+        <Box className={classes.row}>
+          <CapstoneInfo />
+        </Box>
       </Box>
     </div>
   );

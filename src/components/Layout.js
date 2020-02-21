@@ -2,7 +2,7 @@ import React from "react";
 import { Footer, Header } from "./";
 
 export default ({ children }) => (
-  <div className="narrowPanel">
+  <div>
     <Header />
     {children}
     <Footer />
