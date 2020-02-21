@@ -21,9 +21,9 @@ export default function CapstoneInfo() {
     <Box className={classes.root}>
       <h2>About Us</h2>
       <p>
-        This project is part of a 
-        <a href="https://ischool.uw.edu/capstone">Capstone Project course</a> at
-        the University of Washington Information School.
+        This project is part of a University of Washington Information School
+        <a href="https://ischool.uw.edu/capstone"> capstone project </a> and 
+        is sponsored by Common Purpose: Nxt, a local organization focused on reinventing the way the next generation tackles civic action.
       </p>
       <h3>Our Team</h3>
       <Grid container className={classes.gridContainer}>
