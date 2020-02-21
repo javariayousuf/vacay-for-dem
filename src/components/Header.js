@@ -69,9 +69,9 @@ export default function Header() {
 
         <Typography>
           <Link href="/" className={classes.linkBox}>About Us</Link>
-          <Link href="/" className={classes.linkBox}>Process</Link>
-          <Link href="/" className={classes.linkBox}>FAQ</Link>
+          <Link href="/" className={classes.linkBox}>Destinations</Link>
           <Link href="/" className={classes.linkBox}>Testimonials</Link>
+          <Link href="/" className={classes.linkBox}>FAQ</Link>
         </Typography>
 
       </Box>
