@@ -16,18 +16,20 @@ const useStyles = makeStyles(theme => ({
     margin: "20px"
   },
   hero: {
-    height: "80vh",
+    height: "70vh",
     backgroundImage: `url(
       "https://i.imgur.com/EdSdjKf.png"
     )`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    color: "white"
+    color: "white",
+    borderBottom: "2px solid #FF8C03"
   },
   heroTitle: {
     textTransform: "uppercase",
-    fontSize: "70px",
+    fontSize: "65px",
+    marginTop: "20px",
     margin: "0px"
   },
   heroText: {

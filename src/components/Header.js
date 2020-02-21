@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: "#ffffff",
     height: "80px",
-    borderBottom: "2px solid #014378"
+    borderBottom: "2px solid #FF8C03"
   },
   logo: {
     height: "55px",
@@ -70,9 +70,9 @@ export default function Header() {
 
         <Typography>
           <Link href="/" className={classes.linkBox}>About Us</Link>
-          <Link href="/" className={classes.linkBox}>Process</Link>
-          <Link href="/" className={classes.linkBox}>FAQ</Link>
+          <Link href="/" className={classes.linkBox}>Destinations</Link>
           <Link href="/" className={classes.linkBox}>Testimonials</Link>
+          <Link href="/" className={classes.linkBox}>FAQ</Link>
         </Typography>
 
       </Box>
