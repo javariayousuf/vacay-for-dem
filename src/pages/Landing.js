@@ -36,12 +36,6 @@ const useStyles = makeStyles(theme => ({
     margin: "0px",
     marginBottom: "16px"
   },
-  signUpButton: {
-    height: "64px",
-    width: "160px",
-    fontSize: "24px",
-    marginTop: "32px"
-  },
   row: {
     marginBottom: "40px"
   },
@@ -59,6 +53,30 @@ const useStyles = makeStyles(theme => ({
   heading: {
     margin: "0px",
     marginTop: "20px"
+  },
+  missionParagraph: {
+    fontWeight: 'bold',
+    color: '#FF8C00'
+  },
+  signUpButtonTop: {
+    marginTop: '15px',
+    backgroundColor: '#014378',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    height: "60px",
+    width: "100px",
+    fontSize: '17px'
+  },
+  h1: {
+    color: '#014378'
+  },
+  signUpButtonBottom: {
+    backgroundColor: '#014378',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    height: "65px",
+    width: "110px",
+    fontSize: '15px'
   }
 }));
 
@@ -83,7 +101,7 @@ export default function Landing() {
         <Button
           variant="contained"
           color="primary"
-          className={classes.signUpButton}
+          className={classes.signUpButtonTop}
         >
           Sign Up
         </Button>
@@ -119,7 +137,7 @@ export default function Landing() {
           }}
         >
           <div className={classes.textBox}>
-          <h1>Why Vacay for Democracy?</h1>
+          <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
             <p>
               In 2016, 131.7 million out of 213 million eligible voters in the
               United States cast a ballot in the presidential election; a
@@ -162,15 +180,15 @@ export default function Landing() {
               and make informed decisions that impact their lives and our
               communities.
             </p>
-            <p>
-             <b>Vacay for Democracy sends canvassers to swing states, working to
+            <p className={classes.missionParagraph}>
+             Vacay for Democracy sends canvassers to swing states, working to
               equip voters with the tools and information they need to vote with
-              confidence in the 2020 election.</b>
+              confidence in the 2020 election.
             </p>
           </div>
         </Box>
         <Box className={classes.row}>
-          <Button variant="contained" color="primary" size="large">
+          <Button variant="contained" size="large" className={classes.signUpButtonBottom}>
             Sign Up
           </Button>
         </Box>

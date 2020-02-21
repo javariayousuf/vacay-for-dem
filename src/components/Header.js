@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: "#ffffff",
     height: "80px",
-    borderBottom: "2px solid #00B0F0"
+    borderBottom: "2px solid #014378"
   },
   logo: {
     height: "55px",
@@ -32,10 +32,11 @@ const useStyles = makeStyles(theme => ({
   signUpButton: {
     justifyContent: "right",
     margin: "10px",
-    backgroundColor: "#00B0F0",
-    color: "#ffffff",
+    backgroundColor: "#014378",
+    fontWeight: 'bold',
+    color: "#FFFFFF",
     '&:hover': {
-      backgroundColor: "#73d4f5"
+      color: "#014378",
     }
   }
 }));
@@ -69,9 +70,9 @@ export default function Header() {
 
         <Typography>
           <Link href="/" className={classes.linkBox}>About Us</Link>
-          <Link href="/" className={classes.linkBox}>Process</Link>
-          <Link href="/" className={classes.linkBox}>FAQ</Link>
+          <Link href="/" className={classes.linkBox}>Destinations</Link>
           <Link href="/" className={classes.linkBox}>Testimonials</Link>
+          <Link href="/" className={classes.linkBox}>FAQ</Link>
         </Typography>
 
       </Box>
