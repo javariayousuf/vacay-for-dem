@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import { blue } from "@material-ui/core/colors";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
@@ -13,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#ffffff",
     height: "80px",
     width: '100%',
+    borderBottom: "2.5px solid #014378",
     position: 'fixed',
   },
   logo: {
