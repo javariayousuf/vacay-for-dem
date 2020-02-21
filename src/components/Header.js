@@ -12,7 +12,9 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: "#ffffff",
     height: "80px",
-    borderBottom: "2.5px solid #014378"
+    width: '100%',
+    borderBottom: "2.5px solid #014378",
+    position: 'fixed',
   },
   logo: {
     height: "55px",
