@@ -156,14 +156,14 @@ export default function Landing() {
             <p>
               Democracy is based on the principle of “people’s sovereignty”, in
               other words, citizens in America can form and diffuse authority of
-              their government through their elected representatives. 
-            </p>
-            <p>
-              Democracy allows citizens to have a voice in decision-making and guarantees
-              enhanced livelihoods for it’s people. The only way to achieve
+              their government through their elected representatives. Democracy allows citizens to have a voice in 
+              decision-making and guarantees enhanced livelihoods for it’s people. The only way to achieve
               democracy is for all citizens to participate in their elections
               and make informed decisions that impact their lives and our
-              communities. <b>Vacay for Democracy sends canvassers to swing states, working to
+              communities.
+            </p>
+            <p>
+             <b>Vacay for Democracy sends canvassers to swing states, working to
               equip voters with the tools and information they need to vote with
               confidence in the 2020 election.</b>
             </p>
