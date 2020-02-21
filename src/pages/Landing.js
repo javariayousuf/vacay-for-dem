@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold',
     height: "65px",
     width: "110px",
-    fontSize: '15px'
+    fontSize: '16px'
   }
 }));
 
