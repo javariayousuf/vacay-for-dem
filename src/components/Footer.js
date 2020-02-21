@@ -6,13 +6,13 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#eee",
-    borderTop: "1px solid #333"
+    backgroundColor: "#004378",
+    borderTop: "3.25px solid #FF8C03"
   },
   gridContainer: {
     padding: theme.spacing(4),
     textAlign: "left",
-    color: theme.palette.text.secondary
+    color: '#FFFFFF'
   },
   emailContainer: {
     paddingLeft: "10px"
