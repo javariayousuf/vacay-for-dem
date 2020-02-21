@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#ffffff",
     height: "80px",
     width: '100%',
-    borderBottom: "2.5px solid #014378",
     position: 'fixed',
   },
   logo: {
