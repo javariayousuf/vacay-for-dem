@@ -6,8 +6,8 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#004378",
-    borderTop: "3.25px solid #FF8C03"
+    backgroundColor: "#061B4A",
+    borderTop: "3.5px solid #217AE8"
   },
   gridContainer: {
     padding: theme.spacing(4),
@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
   links: {
     color: "inherit",
     textDecoration: "none"
+  },
+  h2: {
+    color: "#97CB8E"
   }
 }));
 
@@ -44,7 +47,7 @@ export default function Footer() {
       >
         <Grid container className={classes.gridContainer}>
           <Grid item xs={12} md={6} className={classes.emailContainer}>
-            <h2>Join the list</h2>
+            <h2 className={classes.h2}>Join the list</h2>
             <p>
               Need more information? Subscribe to our monthly newsletter to
               recieve updates
@@ -62,7 +65,7 @@ export default function Footer() {
             </p>
           </Grid>
           <Grid item xs={12} md={3}>
-            <h2>Contact</h2>
+            <h2 className={classes.h2}>Contact</h2>
             <p>
               1411 4th Avenue Suite 1000
               <br />
@@ -79,7 +82,7 @@ export default function Footer() {
             </p>
           </Grid>
           <Grid item xs={12} md={3}>
-            <h2>Follow us</h2>
+            <h2 className={classes.h2}>Follow us</h2>
             <p>
               <a
                 href="https://www.instagram.com/cpnxt/"
