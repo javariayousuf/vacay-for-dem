@@ -162,7 +162,6 @@ export default function Landing() {
             alignItems: "center"
           }}
         >
-          <div className={classes.colorBlock}></div>
           <div className={classes.textBox}>
             <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
             <p>
@@ -192,7 +191,6 @@ export default function Landing() {
             alignItems: "center"
           }}
         >
-          <div className={classes.colorBlock2}></div>
           <img
             className={classes.demImg}
             src="https://i.imgur.com/P2fgX4h.jpg"
