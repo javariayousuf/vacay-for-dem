@@ -7,7 +7,7 @@ import CapstoneInfo from "../components/CapstoneInfo";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#F9F8F8',
+    backgroundColor: "#F9F8F8"
   },
   ex: {
     height: "850px",
@@ -24,8 +24,8 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: 'fixed',
-    color: "white",
+    backgroundAttachment: "fixed",
+    color: "white"
   },
   heroTitle: {
     textTransform: "uppercase",
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   heroText: {
     fontSize: "30px",
-    fontWeight: 'bold',
+    fontWeight: "bold",
     margin: "0px",
     marginBottom: "16px"
   },
@@ -46,63 +46,63 @@ const useStyles = makeStyles(theme => ({
     width: "475px",
     marginRight: "15px",
     marginLeft: "10px",
-    position: 'relative',
-    zIndex: '2',
+    position: "relative",
+    zIndex: "2"
   },
   colorBlock: {
     backgroundColor: "#97CB8E",
     height: "300px",
     width: "450px",
-    position: 'relative',
-    top: '-45px',
-    left: '1020px',
-    zIndex: '1'
+    position: "relative",
+    top: "-45px",
+    left: "1020px",
+    zIndex: "1"
   },
   colorBlock2: {
     backgroundColor: "#97CB8E",
     height: "355px",
     width: "460px",
-    position: 'relative',
-    top: '-20px',
-    left: '440px',
-    zIndex: '1'
+    position: "relative",
+    top: "-20px",
+    left: "440px",
+    zIndex: "1"
   },
   demImg: {
     height: "350px",
     width: "auto",
-    marginTop: '20px',
+    marginTop: "20px",
     marginRight: "20px",
     marginLeft: "20px",
-    position: 'relative',
-    zIndex: '2',
+    position: "relative",
+    zIndex: "2"
   },
   heading: {
     margin: "0px",
     marginTop: "20px"
   },
   missionParagraph: {
-    fontWeight: 'bold',
-    color: '#ED611D'
+    fontWeight: "bold",
+    color: "#ED611D"
   },
   signUpButtonTop: {
-    marginTop: '15px',
-    backgroundColor: '#014378',
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+    marginTop: "15px",
+    backgroundColor: "#014378",
+    color: "#FFFFFF",
+    fontWeight: "bold",
     height: "60px",
-    width: "100px",
-    fontSize: '17px'
+    width: "150px",
+    fontSize: "17px"
   },
   h1: {
-    color: '#061B4A'
+    color: "#061B4A"
   },
   signUpButtonBottom: {
-    backgroundColor: '#014378',
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+    backgroundColor: "#014378",
+    color: "#FFFFFF",
+    fontWeight: "bold",
     height: "95px",
     width: "150px",
-    fontSize: '16px'
+    fontSize: "16px"
   }
 }));
 
@@ -150,8 +150,7 @@ export default function Landing() {
             justifyContent: "center",
             alignItems: "center"
           }}
-        >
-        </Box>
+        ></Box>
         <Box
           className={classes.row}
           style={{
@@ -200,21 +199,26 @@ export default function Landing() {
             <p>
               Democracy is based on the principle of “people’s sovereignty”, in
               other words, citizens in America can form and diffuse authority of
-              their government through their elected representatives. Democracy allows citizens to have a voice in
-              decision-making and guarantees enhanced livelihoods for it’s people. The only way to achieve
+              their government through their elected representatives. Democracy
+              allows citizens to have a voice in decision-making and guarantees
+              enhanced livelihoods for it’s people. The only way to achieve
               democracy is for all citizens to participate in their elections
               and make informed decisions that impact their lives and our
               communities.
             </p>
             <p className={classes.missionParagraph}>
               Vacay for Democracy sends canvassers to swing states, working to
-               equip voters with the tools and information they need to vote with
-               confidence in the 2020 election.
+              equip voters with the tools and information they need to vote with
+              confidence in the 2020 election.
             </p>
           </div>
         </Box>
         <Box className={classes.row}>
-          <Button variant="contained" size="large" className={classes.signUpButtonBottom}>
+          <Button
+            variant="contained"
+            size="large"
+            className={classes.signUpButtonBottom}
+          >
             Sign Up
           </Button>
         </Box>
