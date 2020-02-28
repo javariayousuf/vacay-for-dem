@@ -6,7 +6,8 @@ import CapstoneInfo from "../components/CapstoneInfo";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    backgroundColor: '#F9F8F8',
   },
   ex: {
     height: "850px",
@@ -23,8 +24,8 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    backgroundAttachment: 'fixed',
     color: "white",
-    borderBottom: "2px solid #FF8C03"
   },
   heroTitle: {
     textTransform: "uppercase",
@@ -44,13 +45,36 @@ const useStyles = makeStyles(theme => ({
   textBox: {
     width: "475px",
     marginRight: "15px",
-    marginLeft: "10px"
+    marginLeft: "10px",
+    position: 'relative',
+    zIndex: '2',
+  },
+  colorBlock: {
+    backgroundColor: "#97CB8E",
+    height: "300px",
+    width: "450px",
+    position: 'relative',
+    top: '-45px',
+    left: '1020px',
+    zIndex: '1'
+  },
+  colorBlock2: {
+    backgroundColor: "#97CB8E",
+    height: "355px",
+    width: "460px",
+    position: 'relative',
+    top: '-20px',
+    left: '440px',
+    zIndex: '1'
   },
   demImg: {
-    height: "325px",
+    height: "350px",
     width: "auto",
+    marginTop: '20px',
     marginRight: "20px",
-    marginLeft: "20px"
+    marginLeft: "20px",
+    position: 'relative',
+    zIndex: '2',
   },
   heading: {
     margin: "0px",
@@ -58,7 +82,7 @@ const useStyles = makeStyles(theme => ({
   },
   missionParagraph: {
     fontWeight: 'bold',
-    color: '#FF8C00'
+    color: '#ED611D'
   },
   signUpButtonTop: {
     marginTop: '15px',
@@ -70,14 +94,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: '17px'
   },
   h1: {
-    color: '#014378'
+    color: '#061B4A'
   },
   signUpButtonBottom: {
     backgroundColor: '#014378',
     color: '#FFFFFF',
     fontWeight: 'bold',
-    height: "65px",
-    width: "110px",
+    height: "95px",
+    width: "150px",
     fontSize: '16px'
   }
 }));
@@ -98,7 +122,7 @@ export default function Landing() {
       >
         <h1 className={classes.heroTitle}>Vacay for Democracy</h1>
         <p className={classes.heroText}>
-        Empowering voters where it matters most.
+          Empowering voters where it matters most.
         </p>
         <Button
           variant="contained"
@@ -139,7 +163,7 @@ export default function Landing() {
           }}
         >
           <div className={classes.textBox}>
-          <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
+            <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
             <p>
               In 2016, 131.7 million out of 213 million eligible voters in the
               United States cast a ballot in the presidential election; a
@@ -176,16 +200,16 @@ export default function Landing() {
             <p>
               Democracy is based on the principle of “people’s sovereignty”, in
               other words, citizens in America can form and diffuse authority of
-              their government through their elected representatives. Democracy allows citizens to have a voice in 
+              their government through their elected representatives. Democracy allows citizens to have a voice in
               decision-making and guarantees enhanced livelihoods for it’s people. The only way to achieve
               democracy is for all citizens to participate in their elections
               and make informed decisions that impact their lives and our
               communities.
             </p>
             <p className={classes.missionParagraph}>
-             Vacay for Democracy sends canvassers to swing states, working to
-              equip voters with the tools and information they need to vote with
-              confidence in the 2020 election.
+              Vacay for Democracy sends canvassers to swing states, working to
+               equip voters with the tools and information they need to vote with
+               confidence in the 2020 election.
             </p>
           </div>
         </Box>
