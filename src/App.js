@@ -5,7 +5,6 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import TrainingHome from "./pages/TrainingHome";
 import Signup from "./pages/Signup";
-import Module from "./pages/Module";
 import { Layout } from "./components/";
 
 const LandingPage = () => (
@@ -32,12 +31,6 @@ const SignupPage = () => (
   </Layout>
 );
 
-const ModulePage = () => (
-  <Layout>
-    <Module />
-  </Layout>
-);
-
 class App extends Component {
   render() {
     return (
@@ -47,7 +40,6 @@ class App extends Component {
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/training" component={TrainingHomePage} />
           <Route exact path="/signup" component={SignupPage} />
-          <Route exact path="/module-01" component ={ModulePage} />
         </Switch>
       </BrowserRouter>
     );
