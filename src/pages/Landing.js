@@ -214,13 +214,15 @@ export default function Landing() {
           </div>
         </Box>
         <Box className={classes.row}>
-          <Button
-            variant="contained"
-            size="large"
-            className={classes.signUpButtonBottom}
-          >
-            Sign Up
-          </Button>
+          <a href="/signup">
+            <Button
+              variant="contained"
+              size="large"
+              className={classes.signUpButtonBottom}
+            >
+              Sign Up
+            </Button>
+          </a>
         </Box>
         <Box className={classes.row}>
           <CapstoneInfo />
