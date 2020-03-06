@@ -103,9 +103,11 @@ export default function Header() {
        </a>
        </Box> */}
       <Box>
-        <Button className={classes.signUpButton} variant="contained">
-          Sign Up
-        </Button>
+        <a href="/signup">
+          <Button className={classes.signUpButton} variant="contained">
+            Sign Up
+          </Button>
+        </a>
       </Box>
     </Box>
   );
