@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import Modal from 'react-responsive-modal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -174,6 +175,21 @@ export default function Signup() {
   const handleAnythingElseChange = event => {
     setAnythingElseValue(event.target.value);
   };
+ 
+  // Modal
+  const [openState, setOpenState] = React.useState({
+    open: false,
+  });
+
+  const onOpenModal = () => {
+    setOpenState({ open: true });
+  };
+ 
+  const onCloseModal = () => {
+    setOpenState({ open: false });
+  };
+
+  const { open } = openState;
 
   // const error =
   //   [white, asian, aian, black, latinx, nhpi, other].filter(v => v).length !==
@@ -245,11 +261,11 @@ export default function Signup() {
       </Grid>
 
       <Typography variant="body1" className={classes.optionalInfo}>
-      The following section of questions is <b>optional</b> and will not be shared with any outside parties. 
-      However, we encourage volunteers to provide us with this information as it is used to optimize your 
-      assigned location to better place you in areas where you will feel the impact of visiting a community 
-      where your skills and perspective are needed. Examples of this may be a commonality between language spoken or a high 
-      population the race which you self-identify as within the community.
+        The following section of questions is <b>optional</b> and will not be shared with any outside parties.
+        However, we encourage volunteers to provide us with this information as it is used to optimize your
+        assigned location to better place you in areas where you will feel the impact of visiting a community
+        where your skills and perspective are needed. Examples of this may be a commonality between language spoken or a high
+        population the race which you self-identify as within the community.
       </Typography>
 
       {/* note here */}
@@ -571,9 +587,17 @@ export default function Signup() {
       </Grid>
 
       <Box className={classes.submitButtonBox}>
-        <Button variant="outlined" className={classes.submitButton}>
-          Submit
-        </Button>
+        <div className="row justify-content-center">
+          <Button variant="outlined" className={classes.submitButton} onClick={onOpenModal}>
+            Submit
+          </Button>
+          <Modal open={open} onClose={onCloseModal} center>
+          <Box><p>Thank you for submitting your response, you will recieve an e-mail shorly with recommended 
+            trip assignments based on your submission.</p>
+            <p>To begin completing your training modules, click <a href="/training">here</a>.</p>
+            </Box>
+          </Modal>
+        </div>
       </Box>
     </div>
   );
