@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   gridContainer: {
     padding: theme.spacing(4),
     textAlign: "left",
-    color: '#FFFFFF'
+    color: "#FFFFFF"
   },
   emailContainer: {
     paddingLeft: "10px"
@@ -29,11 +30,25 @@ const useStyles = makeStyles(theme => ({
   },
   h2: {
     color: "#97CB8E"
-  }
+  },
+  newsletterField: {
+    "&:hover $notchedOutline": {
+      borderColor: "white",
+      color: "white"
+    }
+  },
+  notchedOutline: {}
 }));
 
 export default function Footer() {
   const classes = useStyles();
+
+  const InputProps = {
+    classes: {
+      input: classes.newsletterField,
+      notchedOutline: classes.notchedOutline
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -54,15 +69,17 @@ export default function Footer() {
               <br />
               on upcoming trips and the latest from Vacay for Democracy.
               <br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value="Your email"
-                size="90"
-                className={classes.emailInput}
-              ></input>
             </p>
+
+            <form noValidate autoComplete="off">
+              <TextField
+                id="newsletter"
+                label="Your email"
+                variant="outlined"
+                className={classes.newsletterField}
+                InputProps={InputProps}
+              />
+            </form>
           </Grid>
           <Grid item xs={12} md={3}>
             <h2 className={classes.h2}>Contact</h2>
@@ -87,6 +104,7 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/cpnxt/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={classes.links}
               >
                 Instagram
@@ -95,6 +113,7 @@ export default function Footer() {
               <a
                 href="https://twitter.com/cpnxt"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={classes.links}
               >
                 Twitter
@@ -103,6 +122,7 @@ export default function Footer() {
               <a
                 href="https://www.moreperfectaf.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={classes.links}
               >
                 Podcast

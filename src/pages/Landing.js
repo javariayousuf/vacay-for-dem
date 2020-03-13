@@ -124,13 +124,15 @@ export default function Landing() {
         <p className={classes.heroText}>
           Empowering voters where it matters most.
         </p>
-        <Button
-          variant="contained"
-          color="primary"
-          className={classes.signUpButtonTop}
-        >
-          Sign Up
-        </Button>
+        <a href="/signup">
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.signUpButtonTop}
+          >
+            Sign Up
+          </Button>
+        </a>
       </Box>
       <Box
         className={classes.root}
@@ -214,13 +216,15 @@ export default function Landing() {
           </div>
         </Box>
         <Box className={classes.row}>
-          <Button
-            variant="contained"
-            size="large"
-            className={classes.signUpButtonBottom}
-          >
-            Sign Up
-          </Button>
+          <a href="/signup">
+            <Button
+              variant="contained"
+              size="large"
+              className={classes.signUpButtonBottom}
+            >
+              Sign Up
+            </Button>
+          </a>
         </Box>
         <Box className={classes.row}>
           <CapstoneInfo />

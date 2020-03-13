@@ -5,26 +5,25 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#ffffff",
     height: "80px",
-    width: '100%',
+    width: "100%",
     borderBottom: "2.5px solid #014378",
-    position: 'fixed',
+    position: "fixed"
   },
   logo: {
     height: "55px",
     margin: "20px",
     marginRight: "50px"
-  }, 
+  },
   linkBox: {
     padding: "15px",
     paddingTop: "31px",
     paddingBottom: "31px",
-    '&:hover': {
+    "&:hover": {
       backgroundColor: "#eee"
     },
     color: "inherit",
@@ -34,10 +33,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "right",
     margin: "10px",
     backgroundColor: "#014378",
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: "#FFFFFF",
-    '&:hover': {
-      color: "#014378",
+    "&:hover": {
+      color: "#014378"
     }
   }
 }));
@@ -55,27 +54,34 @@ export default function Header() {
       }}
     >
       <Box
-      style={{
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center"
-      }}
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center"
+        }}
       >
-      <a href="/">
-        <img
-          className={classes.logo}
-          src="https://images.squarespace-cdn.com/content/5c464da03917ee46230d8232/1563495118773-4QCOOM46M387IUO76BJK/VforD.jpg?content-type=image%2Fjpeg"
-          alt="vacay logo"
-        />
-      </a>
+        <a href="/">
+          <img
+            className={classes.logo}
+            src="https://images.squarespace-cdn.com/content/5c464da03917ee46230d8232/1563495118773-4QCOOM46M387IUO76BJK/VforD.jpg?content-type=image%2Fjpeg"
+            alt="vacay logo"
+          />
+        </a>
 
         <Typography>
-          <Link href="/" className={classes.linkBox}>About Us</Link>
-          <Link href="/" className={classes.linkBox}>Destinations</Link>
-          <Link href="/" className={classes.linkBox}>Testimonials</Link>
-          <Link href="/" className={classes.linkBox}>FAQ</Link>
+          <Link href="/" className={classes.linkBox}>
+            About Us
+          </Link>
+          <Link href="/" className={classes.linkBox}>
+            Destinations
+          </Link>
+          <Link href="/" className={classes.linkBox}>
+            Testimonials
+          </Link>
+          <Link href="/" className={classes.linkBox}>
+            FAQ
+          </Link>
         </Typography>
-
       </Box>
 
       {/* <a href="/">
@@ -97,8 +103,12 @@ export default function Header() {
        </a>
        </Box> */}
       <Box>
-        <Button className={classes.signUpButton} variant="contained">Sign Up</Button>
+        <a href="/signup">
+          <Button className={classes.signUpButton} variant="contained">
+            Sign Up
+          </Button>
+        </a>
       </Box>
-    </Box>    
+    </Box>
   );
 }

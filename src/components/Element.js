@@ -8,8 +8,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#dddddd",
     height: "250px",
     width: "400px",
-    border: "3px solid ##333",
-    backgroundColor: "#eee"
+    border: "3px solid ##333"
+    // backgroundColor: "#eee"
   }
 }));
 
