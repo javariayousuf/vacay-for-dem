@@ -95,6 +95,11 @@ const useStyles = makeStyles(theme => ({
   field: {
     width: 300,
     backgroundColor: "white"
+  },
+  trainingLink: {
+    fontWeight: 'bold',
+    color: "#014378",
+    textDecoration: "none"
   }
 }));
 
@@ -594,7 +599,7 @@ export default function Signup() {
           <Modal open={open} onClose={onCloseModal} center>
           <Box><p>Thank you for submitting your response! You will recieve an e-mail shortly with recommended 
             trip assignments based on your submission.</p>
-            <p>To begin completing your training modules please click <a href="/training">here</a>.</p>
+            <p>Please click <a className={classes.trainingLink} href="/training">here</a> to begin completing your training modules.</p>
             </Box>
           </Modal>
         </div>
