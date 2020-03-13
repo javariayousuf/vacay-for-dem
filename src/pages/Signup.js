@@ -95,6 +95,11 @@ const useStyles = makeStyles(theme => ({
   field: {
     width: 300,
     backgroundColor: "white"
+  },
+  trainingLink: {
+    fontWeight: 'bold',
+    color: "#014378",
+    textDecoration: "none"
   }
 }));
 
@@ -192,8 +197,7 @@ export default function Signup() {
   const { open } = openState;
 
   // const error =
-  //   [white, asian, aian, black, latinx, nhpi, other].filter(v => v).length !==
-  //   2;
+  //   [white, asian, aian, black, latinx, nhpi, other].filter(v => v).length !== 2;
 
   return (
     <div className={classes.root}>
@@ -592,9 +596,9 @@ export default function Signup() {
             Submit
           </Button>
           <Modal open={open} onClose={onCloseModal} center>
-          <Box><p>Thank you for submitting your response, you will recieve an e-mail shorly with recommended 
+          <Box><p>Thank you for submitting your response! You will recieve an e-mail shortly with recommended 
             trip assignments based on your submission.</p>
-            <p>To begin completing your training modules, click <a href="/training">here</a>.</p>
+            <p>Please click <a className={classes.trainingLink} href="/training">here</a> to begin completing your training modules.</p>
             </Box>
           </Modal>
         </div>
