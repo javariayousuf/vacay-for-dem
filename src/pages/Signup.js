@@ -245,10 +245,11 @@ export default function Signup() {
       </Grid>
 
       <Typography variant="body1" className={classes.optionalInfo}>
-        The following section of questions is optional. The information
-        collected is used to optimize your assigned location to better place
-        volunteers in areas where they will feel the impact of visiting a
-        community where their skills and perspective are needed.
+      The following section of questions is <b>optional</b> and will not be shared with any outside parties. 
+      However, we encourage volunteers to provide us with this information as it is used to optimize your 
+      assigned location to better place you in areas where you will feel the impact of visiting a community 
+      where your skills and perspective are needed. Examples of this may be a commonality between language spoken or a high 
+      population the race which you self-identify as within the community.
       </Typography>
 
       {/* note here */}
