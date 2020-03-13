@@ -197,8 +197,7 @@ export default function Signup() {
   const { open } = openState;
 
   // const error =
-  //   [white, asian, aian, black, latinx, nhpi, other].filter(v => v).length !==
-  //   2;
+  //   [white, asian, aian, black, latinx, nhpi, other].filter(v => v).length !== 2;
 
   return (
     <div className={classes.root}>
