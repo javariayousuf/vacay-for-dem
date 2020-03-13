@@ -4,6 +4,10 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Popover from '@material-ui/core/Popover';
+import Grid from "@material-ui/core/Grid";
+import FormControl from "@material-ui/core/FormControl";
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,11 +42,67 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       color: "#014378"
     }
+  },
+  signInButton: {
+    justifyContent: "right",
+    margin: "10px",
+    backgroundColor: "#014378",
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    "&:hover": {
+      color: "#014378"
+    }
+  },
+  inputField: {
+    marginRight: 12,
+    marginLeft: 12,
+    marginTop: 5,
+    marginBottom: 10,
+  },
+  submitButtonBox: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  submitButton: {
+    width: 35,
+    height: 35,
+    backgroundColor: "#ddd",
+    fontWeight: "bold",
+    fontSize: "10pt",
+    marginBottom: 5,
+    "&:hover": {
+      color: "white",
+      backgroundColor: "#014378"
+    }
+  },
+  signOutButton: {
+    display: "none",
+    justifyContent: "right",
+    margin: "10px",
+    backgroundColor: "#014378",
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    "&:hover": {
+      color: "#014378"
+    }
   }
 }));
 
 export default function Header() {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
   return (
     <Box
@@ -84,28 +144,66 @@ export default function Header() {
         </Typography>
       </Box>
 
-      {/* <a href="/">
-        <Box className={classes.linkBox}>
-          <p className={classes.links}>test link</p>
-        </Box>
-      </a>
-
-      <a href="/">
-      <Box className={classes.linkBox}>
-        <p>test link</p>
-      </Box>
-      </a>
-
-       <a href="/">
-      <Box className={classes.linkBox}>
-        <p>test link</p>
-      </Box>
-       </a>
-       </Box> */}
       <Box>
         <a href="/signup">
           <Button className={classes.signUpButton} variant="contained">
             Sign Up
+          </Button>
+        </a>
+
+        <a>
+          <Button aria-describedby={id} onClick={handleClick} className={classes.signInButton} variant="contained">
+            Log In
+        </Button>
+          <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+          >
+            <Typography className={classes.SignInBox}>
+              <form className={classes.form1} noValidate autoComplete="off">
+                <Grid item xs={12}>
+                  <FormControl>
+                    <TextField
+                      required
+                      id="email"
+                      label="Email Address"
+                      className={classes.inputField}
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl>
+                    <TextField
+                      required
+                      id="pass"
+                      label="Password"
+                      className={classes.inputField}
+                    />
+                  </FormControl>
+                </Grid>
+              </form>
+            </Typography>
+            <Box className={classes.submitButtonBox}>
+              <Button variant="outlined" className={classes.submitButton}>
+                GO
+            </Button>
+            </Box>
+          </Popover>
+        </a>
+
+        <a>
+          <Button className={classes.signOutButton} variant="contained">
+            Sign Out
           </Button>
         </a>
       </Box>
