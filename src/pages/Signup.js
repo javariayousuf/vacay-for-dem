@@ -592,9 +592,9 @@ export default function Signup() {
             Submit
           </Button>
           <Modal open={open} onClose={onCloseModal} center>
-          <Box><p>Thank you for submitting your response, you will recieve an e-mail shorly with recommended 
+          <Box><p>Thank you for submitting your response! You will recieve an e-mail shortly with recommended 
             trip assignments based on your submission.</p>
-            <p>To begin completing your training modules, click <a href="/training">here</a>.</p>
+            <p>To begin completing your training modules please click <a href="/training">here</a>.</p>
             </Box>
           </Modal>
         </div>
