@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import CapstoneInfo from "../components/CapstoneInfo";
+import { useIdentityContext } from "react-netlify-identity";
+
+import IdentityModal from "react-netlify-identity-widget";
 
 
 const useStyles = makeStyles(theme => ({
@@ -108,6 +111,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Landing() {
+  const [popup, changePopup] = React.useState(false);
+  const identity = useIdentityContext();
+  console.log(identity);
+
   const classes = useStyles();
 
   return (
@@ -125,11 +132,12 @@ export default function Landing() {
         <p className={classes.heroText}>
           Empowering voters where it matters most.
         </p>
-        <a href="/signup">
+        <a href="/#">
           <Button
             variant="contained"
             color="primary"
             className={classes.signUpButtonTop}
+            onClick={() => changePopup(true)}
           >
             Sign Up
           </Button>
@@ -217,11 +225,12 @@ export default function Landing() {
           </div>
         </Box>
         <Box className={classes.row}>
-          <a href="/signup">
+          <a href="/#">
             <Button
               variant="contained"
               size="large"
               className={classes.signUpButtonBottom}
+              onClick={() => changePopup(true)}
             >
               Sign Up
             </Button>
@@ -237,6 +246,10 @@ export default function Landing() {
           <CapstoneInfo />
         </Box>
       </Box>
+      <IdentityModal
+        showDialog={popup}
+        onCloseDialog={() => changePopup(false)}
+      />
     </div>
   );
 }
