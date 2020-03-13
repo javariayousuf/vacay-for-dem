@@ -7,6 +7,7 @@ import { useIdentityContext } from "react-netlify-identity";
 
 import IdentityModal from "react-netlify-identity-widget";
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -214,7 +215,7 @@ export default function Landing() {
               enhanced livelihoods for it’s people. The only way to achieve
               democracy is for all citizens to participate in their elections
               and make informed decisions that impact their lives and our
-              communities.
+              communities.g
             </p>
             <p className={classes.missionParagraph}>
               Vacay for Democracy sends canvassers to swing states, working to
@@ -234,6 +235,12 @@ export default function Landing() {
               Sign Up
             </Button>
           </a>
+        </Box>
+        <Box className={classes.row}>
+          <h1 className={classes.h1}>Our Solution</h1>
+          <img className={classes.demImg} src="https://i.imgur.com/zgqifeF.jpg" alt="training module page"/>
+          <img className={classes.demImg} src="https://i.imgur.com/2hUpBt1.jpg" alt="training progress page"/>
+          <img className={classes.demImg} src="https://i.imgur.com/Caurj9x.png" alt="testimonial page"/>
         </Box>
         <Box className={classes.row}>
           <CapstoneInfo />
