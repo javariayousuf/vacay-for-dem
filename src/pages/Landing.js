@@ -7,7 +7,6 @@ import { useIdentityContext } from "react-netlify-identity";
 
 import IdentityModal from "react-netlify-identity-widget";
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -72,8 +71,8 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1"
   },
   demImg: {
-    height: "350px",
-    width: "auto",
+    height: "auto",
+    width: "450px",
     marginTop: "20px",
     marginRight: "20px",
     marginLeft: "20px",
@@ -236,11 +235,32 @@ export default function Landing() {
             </Button>
           </a>
         </Box>
-        <Box className={classes.row}>
+        <Box
+          className={classes.row}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
           <h1 className={classes.h1}>Our Solution</h1>
-          <img className={classes.demImg} src="https://i.imgur.com/zgqifeF.jpg" alt="training module page"/>
-          <img className={classes.demImg} src="https://i.imgur.com/2hUpBt1.jpg" alt="training progress page"/>
-          <img className={classes.demImg} src="https://i.imgur.com/Caurj9x.png" alt="testimonial page"/>
+          <img
+            className={classes.demImg}
+            src="https://i.imgur.com/zgqifeF.jpg"
+            alt="training module page"
+          />
+          <img
+            className={classes.demImg}
+            src="https://i.imgur.com/2hUpBt1.jpg"
+            alt="training progress page"
+          />
+          <img
+            className={classes.demImg}
+            src="https://i.imgur.com/Caurj9x.png"
+            alt="testimonial page"
+          />
         </Box>
         <Box className={classes.row}>
           <CapstoneInfo />
