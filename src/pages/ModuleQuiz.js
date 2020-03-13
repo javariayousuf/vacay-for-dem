@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "flex-end",
     paddingRight: "10%",
-    paddingBottom: "3%"
+    paddingBottom: "15px"
   },
   learnText:{
     paddingTop: 50,
@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ModulePage() {
+export default function ModuleQuiz() {
   const classes = useStyles();
 
   return (
@@ -76,35 +76,18 @@ export default function ModulePage() {
                 Module 1.1
               </Typography>
               <Typography variant="h5" className={classes.pos} component="h2">
-                Packing for the Trip
+                Packing for the Trip Quiz
               </Typography>
-              <iframe width="1120" height="630" src="https://www.youtube.com/embed/sxV5Qmw0fG4" 
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  
-                allowfullscreen>
-              </iframe>
             </CardContent>
             {/* <Button variant="contained" color="primary" href="#contained-buttons">
               Next
             </Button> */}
           </Card>
-          <Box className={classes.learnText}>
-          Canvassing is the systematic initiation of direct contact with individuals, commonly used during political campaigns. 
-          Canvassing can be done for many reasons: political campaigning, grassroots fundraising, community awareness, membership 
-          drives, and more.[1] Campaigners knock on doors to contact people personally. Canvassing is used by political parties 
-          and issue groups to identify supporters, persuade the undecided, and add voters to the voters list through voter registration, 
-          and it is central to get out the vote operations. It is the core element of what political campaigns call the ground game or field.
-          Organized political canvassing became a central tool of contested election campaigns in Britain, and has remained a core practice 
-          performed by thousands of volunteers at each election there, and in many countries with similar political systems. It is less common  
-          in continental Europe and East Asian democracies.
-          </Box>
       </Box>
       <Box className={classes.buttonBox}>
-        {/* <a href="/module-01-quiz"> */}
-        <Button className={classes.nextButton} variant="contained" color="primary" href="/module-02-quiz">
+        <Button className={classes.nextButton} variant="contained" color="primary" href="#contained-buttons">
           Next >>
         </Button>
-        {/* </a> */}
       </Box>
     </div>
   );
