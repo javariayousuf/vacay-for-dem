@@ -50,6 +50,7 @@ export default function Landing() {
 
   return (
     <div className={classes.root}>
+      <div style={{ height: 100 }} />
       <Typography variant="h2" className={classes.pageTitle}>
         Training Modules
       </Typography>
