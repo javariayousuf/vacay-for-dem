@@ -4,10 +4,12 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import Popover from '@material-ui/core/Popover';
+import Popover from "@material-ui/core/Popover";
 import Grid from "@material-ui/core/Grid";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
+
+import IdentityModal from "react-netlify-identity-widget";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,7 +18,9 @@ const useStyles = makeStyles(theme => ({
     height: "80px",
     width: "100%",
     borderBottom: "2.5px solid #014378",
-    position: "fixed"
+    position: "fixed",
+
+    zIndex: "999"
   },
   logo: {
     height: "55px",
@@ -57,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: 12,
     marginLeft: 12,
     marginTop: 5,
-    marginBottom: 10,
+    marginBottom: 10
   },
   submitButtonBox: {
     display: "flex",
@@ -93,6 +97,8 @@ export default function Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const [popup, changePopup] = React.useState(false);
+
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -102,7 +108,7 @@ export default function Header() {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <Box
@@ -145,28 +151,38 @@ export default function Header() {
       </Box>
 
       <Box>
-        <a href="/signup">
-          <Button className={classes.signUpButton} variant="contained">
+        <a href="/#">
+          <Button
+            className={classes.signUpButton}
+            variant="contained"
+            onClick={() => changePopup(true)}
+          >
             Sign Up
           </Button>
         </a>
 
         <a>
-          <Button aria-describedby={id} onClick={handleClick} className={classes.signInButton} variant="contained">
+          <Button
+            aria-describedby={id}
+            onClick={handleClick}
+            className={classes.signInButton}
+            variant="contained"
+            onClick={() => changePopup(true)}
+          >
             Log In
-        </Button>
+          </Button>
           <Popover
             id={id}
             open={open}
             anchorEl={anchorEl}
             onClose={handleClose}
             anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'right',
+              vertical: "bottom",
+              horizontal: "right"
             }}
             transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
+              vertical: "top",
+              horizontal: "right"
             }}
           >
             <Typography className={classes.SignInBox}>
@@ -196,7 +212,7 @@ export default function Header() {
             <Box className={classes.submitButtonBox}>
               <Button variant="outlined" className={classes.submitButton}>
                 GO
-            </Button>
+              </Button>
             </Box>
           </Popover>
         </a>
@@ -207,6 +223,11 @@ export default function Header() {
           </Button>
         </a>
       </Box>
+
+      <IdentityModal
+        showDialog={popup}
+        onCloseDialog={() => changePopup(false)}
+      />
     </Box>
   );
 }
