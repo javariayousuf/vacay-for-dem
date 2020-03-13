@@ -10,6 +10,7 @@ import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 
 import IdentityModal from "react-netlify-identity-widget";
+import { useIdentityContext } from "react-netlify-identity-widget";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -98,6 +99,8 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const [popup, changePopup] = React.useState(false);
+  const identity = useIdentityContext();
+  const email = identity?.user?.email;
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
@@ -150,79 +153,93 @@ export default function Header() {
         </Typography>
       </Box>
 
-      <Box>
-        <a href="/#">
-          <Button
-            className={classes.signUpButton}
-            variant="contained"
-            onClick={() => changePopup(true)}
-          >
-            Sign Up
-          </Button>
-        </a>
+      {email ? (
+        <Box>
+          <a href="#">
+            <Button
+              className={classes.signUpButton}
+              variant="contained"
+              onClick={() => identity.logoutUser()}
+            >
+              Log Out
+            </Button>
+          </a>
+        </Box>
+      ) : (
+        <Box>
+          <a href="/#">
+            <Button
+              className={classes.signUpButton}
+              variant="contained"
+              onClick={() => changePopup(true)}
+            >
+              Sign Up
+            </Button>
+          </a>
 
-        <a>
-          <Button
-            aria-describedby={id}
-            onClick={handleClick}
-            className={classes.signInButton}
-            variant="contained"
-            onClick={() => changePopup(true)}
-          >
-            Log In
-          </Button>
-          <Popover
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right"
-            }}
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right"
-            }}
-          >
-            <Typography className={classes.SignInBox}>
-              <form className={classes.form1} noValidate autoComplete="off">
-                <Grid item xs={12}>
-                  <FormControl>
-                    <TextField
-                      required
-                      id="email"
-                      label="Email Address"
-                      className={classes.inputField}
-                    />
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <FormControl>
-                    <TextField
-                      required
-                      id="pass"
-                      label="Password"
-                      className={classes.inputField}
-                    />
-                  </FormControl>
-                </Grid>
-              </form>
-            </Typography>
-            <Box className={classes.submitButtonBox}>
-              <Button variant="outlined" className={classes.submitButton}>
-                GO
-              </Button>
-            </Box>
-          </Popover>
-        </a>
+          <a>
+            <Button
+              aria-describedby={id}
+              onClick={handleClick}
+              className={classes.signInButton}
+              variant="contained"
+              onClick={() => changePopup(true)}
+            >
+              Log In
+            </Button>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right"
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right"
+              }}
+            >
+              <Typography className={classes.SignInBox}>
+                <form className={classes.form1} noValidate autoComplete="off">
+                  <Grid item xs={12}>
+                    <FormControl>
+                      <TextField
+                        required
+                        id="email"
+                        label="Email Address"
+                        className={classes.inputField}
+                      />
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormControl>
+                      <TextField
+                        required
+                        id="pass"
+                        label="Password"
+                        className={classes.inputField}
+                      />
+                    </FormControl>
+                  </Grid>
+                </form>
+              </Typography>
+              <Box className={classes.submitButtonBox}>
+                <Button variant="outlined" className={classes.submitButton}>
+                  GO
+                </Button>
+              </Box>
+            </Popover>
+          </a>
 
-        <a>
-          <Button className={classes.signOutButton} variant="contained">
-            Sign Out
-          </Button>
-        </a>
-      </Box>
+          <a>
+            <Button className={classes.signOutButton} variant="contained">
+              Sign Out
+            </Button>
+          </a>
+        </Box>
+      )}
 
       <IdentityModal
         showDialog={popup}
