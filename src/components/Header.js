@@ -164,6 +164,12 @@ export default function Header() {
               Log Out
             </Button>
           </a>
+
+          <a href="/training">
+            <Button className={classes.signUpButton} variant="contained">
+              Go to training
+            </Button>
+          </a>
         </Box>
       ) : (
         <Box>
