@@ -9,6 +9,9 @@ import Module from "./pages/Module";
 import ModuleQuiz from "./pages/ModuleQuiz";
 import { Layout } from "./components/";
 
+import { IdentityContextProvider } from "react-netlify-identity-widget";
+import "react-netlify-identity-widget/styles.css";
+
 const LandingPage = () => (
   <Layout>
     <Landing />
@@ -48,16 +51,18 @@ const ModuleQuizPage = () => (
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/training" component={TrainingHomePage} />
-          <Route exact path="/signup" component={SignupPage} />
-          <Route exact path="/module-02" component ={ModulePage} />
-          <Route exact path="/module-02-quiz" component ={ModuleQuizPage} />
-        </Switch>
-      </BrowserRouter>
+      <IdentityContextProvider url={"https://vacay-for-dem.netlify.com/"}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/training" component={TrainingHomePage} />
+            <Route exact path="/signup" component={SignupPage} />
+            <Route exact path="/module-02" component ={ModulePage} />
+            <Route exact path="/module-02-quiz" component ={ModuleQuizPage} />
+          </Switch>
+        </BrowserRouter>
+      </IdentityContextProvider>
     );
   }
 }
