@@ -7,6 +7,7 @@ import TrainingHome from "./pages/TrainingHome";
 import Signup from "./pages/Signup";
 import Module from "./pages/Module";
 import ModuleQuiz from "./pages/ModuleQuiz";
+import Testimonial from "./pages/Testimonial";
 import { Layout } from "./components/";
 
 import { IdentityContextProvider } from "react-netlify-identity-widget";
@@ -48,6 +49,12 @@ const ModuleQuizPage = () => (
   </Layout>
 );
 
+const TestimonialPage = () => (
+  <Layout>
+    <Testimonial />
+  </Layout>
+);
+
 class App extends Component {
   render() {
     return (
@@ -58,8 +65,9 @@ class App extends Component {
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/training" component={TrainingHomePage} />
             <Route exact path="/signup" component={SignupPage} />
-            <Route exact path="/module-02" component ={ModulePage} />
-            <Route exact path="/module-02-quiz" component ={ModuleQuizPage} />
+            <Route exact path="/module-02" component={ModulePage} />
+            <Route exact path="/module-02-quiz" component={ModuleQuizPage} />
+            <Route exact path="/testimonials" component={TestimonialPage} />
           </Switch>
         </BrowserRouter>
       </IdentityContextProvider>

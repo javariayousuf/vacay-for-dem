@@ -144,7 +144,7 @@ export default function Header() {
           <Link href="/" className={classes.linkBox}>
             Destinations
           </Link>
-          <Link href="/" className={classes.linkBox}>
+          <Link href="/testimonials" className={classes.linkBox}>
             Testimonials
           </Link>
           <Link href="/" className={classes.linkBox}>
