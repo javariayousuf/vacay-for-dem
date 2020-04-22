@@ -1,4 +1,5 @@
 export { default as Landing } from "./Landing";
+export { default as AboutUs } from "./AboutUs";
 export { default as Login } from "./Login";
 export { default as TrainingHome } from "./TrainingHome";
 export { default as Signup } from "./Signup";
