@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 
+
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -14,9 +15,6 @@ const useStyles = makeStyles(theme => ({
         PaddingLeft: theme.spacing(10),
         textAlign: "left",
         marginTop: "auto"
-    },
-    gridItemRight: {
-        textAlign: "right"
     },
     cardsDiv: {
         width: "90%",
@@ -34,12 +32,21 @@ export default function Testimonial() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Box className={classes.cardsDiv}>
+
+<Box className={classes.cardsDiv}>
                 <Grid container className={classes.gridContainer}>
+                <Grid item xs={12} md={12} className={classes.gridItem}>
+                        <h2>Nate, 26</h2>
+                        <p>I chose to volunteer with Vacay for Democracy because the organization has created an effective way for young adults to civically engage in voting-related initiatives while also building a lasting community that extends past the end of the trip; 
+                        the notion that I would be potentially building a community full of enthusiastic like-minded folks was very enticing to me!</p>
+                        <p>Volunteering allowed me to meet like-minded young adults who are also passionate about civic engagement and being able to be part of a community revolved around these tenets. 
+                        I loved being able to step outside the comfortable familiarity of my community to learn about voting initiatives going on in other states and cities. </p>
+                        <p>Young people impacted by the decisions of elected officials and therefore, should have an equal say in what goes on. 
+                        By volunteering, whether it's something canvassing for votes or applying to be on a city commission, we're reclaiming some of the agency that has been lost through false pre-conceived notions of our ability to contribute to the conversation. </p>
+                    </Grid>
                     <Grid item xs={12} md={12} className={classes.gridItem}>
                         <h2>Tara, 36</h2>
-                        <h3>Virginia</h3>
-                        <p>I chose to volunteer, because I’d never been involved with civic action work and it sounded really fun to be able to travel with a group of fun (hilarious, creative, kind, compassionate, the list goes on) and progressive people. 
+                        <p>I volunteered for Vacay for Democracy, because I’d never been involved with civic action work and it sounded really fun to be able to travel with a group of fun (hilarious, creative, kind, compassionate, the list goes on) and progressive people. 
                             I wanted to say yes to something that was outside of my comfort zone, and so I could have a hand in making a difference.</p>
                         <p>My experience showed me that talking to neighbors, building connection and supporting communities can cause change. The work wasn't as hard or as scary as I thought prior to trying it, but it sure is impactful. 
                             I am so proud of the work our team did in Virginia!</p>
@@ -48,19 +55,8 @@ export default function Testimonial() {
                         <p>Volunteering helped me build my awareness around certain issues I knew little to nothing about. 
                             Young people have such unique and novel ideas for what we want our future look like, it's important we hone our skills and and get involved so that we can be apart of creating change!</p>  
                     </Grid>
-                    <Grid item xs={12} md={12} className={classes.gridItemRight}>
-                        <h2>Jaybee</h2>
-                        <h3>State Volunteered</h3>
-                        <p>Paragraph here</p>
-                    </Grid>
                     <Grid item xs={12} md={12} className={classes.gridItem}>
-                        <h2>Nate</h2>
-                        <h3>State Volunteered</h3>
-                        <p>Paragraph here</p>
-                    </Grid>
-                    <Grid item xs={12} md={12} className={classes.gridItemRight}>
                         <h2>Faiza, 25</h2>
-                        <h3>Virginia</h3>
                         <p>My decision to volunteer was based on a few different reasons, one being that was looking to get back into politics and this trip seemed liked a good starting point.</p>
                         <p>This experience has taught me that canvassing isn’t all about convincing people to vote for a particular candidate. 
                             In my past experience as a campaign staffer, the hardest part of my job was feeling the need to persuade voters to vote a certain way. </p>
@@ -74,6 +70,8 @@ export default function Testimonial() {
                     </Grid>
                 </Grid>
             </Box>
+
+
         </div>
     );
 }
