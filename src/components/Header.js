@@ -38,16 +38,6 @@ const useStyles = makeStyles(theme => ({
     color: "inherit",
     height: "80px"
   },
-  signUpButton: {
-    justifyContent: "right",
-    margin: "10px",
-    backgroundColor: "#014378",
-    fontWeight: "bold",
-    color: "#FFFFFF",
-    "&:hover": {
-      color: "#014378"
-    }
-  },
   signInButton: {
     justifyContent: "right",
     margin: "10px",
@@ -141,9 +131,6 @@ export default function Header() {
           <Link href="/" className={classes.linkBox}>
             About Us
           </Link>
-          <Link href="/" className={classes.linkBox}>
-            Destinations
-          </Link>
           <Link href="/testimonials" className={classes.linkBox}>
             Testimonials
           </Link>
@@ -167,21 +154,13 @@ export default function Header() {
 
           <a href="/training">
             <Button className={classes.signUpButton} variant="contained">
-              Go to training
+              Training
             </Button>
           </a>
         </Box>
       ) : (
         <Box>
-          <a href="/#">
-            <Button
-              className={classes.signUpButton}
-              variant="contained"
-              onClick={() => changePopup(true)}
-            >
-              Sign Up
-            </Button>
-          </a>
+    
 
           <a>
             <Button
