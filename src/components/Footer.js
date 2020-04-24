@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none"
   },
   h2: {
-    color: "#97CB8E"
+    color: "#F03265"
   },
   newsletterField: {
     "&:hover $notchedOutline": {
