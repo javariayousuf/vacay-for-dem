@@ -119,15 +119,6 @@ export default function Header() {
           alignItems: "center"
         }}
       >
-<<<<<<< HEAD
-        <a href="/">
-          <img
-            className={classes.logo}
-            src="https://images.squarespace-cdn.com/content/5c464da03917ee46230d8232/1563495118773-4QCOOM46M387IUO76BJK/VforD.jpg?content-type=image%2Fjpeg"
-            alt="vacay logo"
-          />
-        </a>
-=======
       <a href="/">
         <img
           className={classes.logo}
@@ -135,7 +126,6 @@ export default function Header() {
           alt="Vacay for Democracy Logo"
         />
       </a>
->>>>>>> header
 
         <Typography>
           <Link href="/" className={classes.linkBox}>
