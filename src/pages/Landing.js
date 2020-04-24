@@ -2,10 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
-import CapstoneInfo from "../components/CapstoneInfo";
 import { useIdentityContext } from "react-netlify-identity";
 
 import IdentityModal from "react-netlify-identity-widget";
+
+import map from "../map.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -165,7 +166,7 @@ export default function Landing() {
           Empowering voters<br></br>
           where it matters most.
         </h1></Box>
-        <a href="/#">
+        <a href="/">
           <Button
             variant="contained"
             color="primary"
@@ -203,7 +204,7 @@ export default function Landing() {
         }}
       >
         <h1 className={classes.heroTitle}>Why Vacay for Democracy?</h1>
-        <p className={classes.heroText}> 🤔
+        <p className={classes.heroText}> <span role="img" aria-label="thinking face">🤔</span>
         </p>
         <a href="/">
           <Button
@@ -300,7 +301,7 @@ export default function Landing() {
         </Box> */}
 
         <Box className={classes.whiteBox}  style={{
-            display: "flex",
+            display: "none",
             flexDirection: "row",
             flexWrap: "wrap",
             justifyContent: "center"
@@ -320,22 +321,15 @@ export default function Landing() {
               Sign Up
             </Button>
           </a>
-        </Box> */}
+        </Box> 
         <Box
           className={classes.row}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center"
+            textAlign: "center"
           }}
-        >
-        </Box>
-        <Box className={classes.row}>
-          <CapstoneInfo />
-        </Box>
-      </Box>
+        ><img src={map} alt="map" style={{width: "70vw"}}/>
+        </Box> */}
+      </Box> 
       <IdentityModal
         showDialog={popup}
         onCloseDialog={() => changePopup(false)}

@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,13 +37,13 @@ export default function CapstoneInfo() {
 
   return (
     <Box className={classes.root}>
-      <h2>About Us</h2>
+      <h2 style={{fontWeight: "bold"}}>About Us</h2>
       <p>
         This project is part of a University of Washington Information School
         <a href="https://ischool.uw.edu/capstone"> capstone project </a> and 
         is sponsored by Common Purpose: Nxt, a local organization focused on reinventing the way the next generation tackles civic action.
       </p>
-      <h3>Our Team</h3>
+      <h3 style={{fontWeight: "normal"}}>Our Team</h3>
       <Box 
         style = {{
           display: "flex",
@@ -95,7 +94,7 @@ export default function CapstoneInfo() {
               alt="phoebe"
             />
             <p>
-              Phoebe is a UX enthusiest who loves to listen to Ariana Grande.
+              Phoebe is a UX enthusiast who loves to listen to Ariana Grande.
             </p>
           </a>
         </Box>
@@ -141,7 +140,7 @@ export default function CapstoneInfo() {
               alt="jacques"
           />
           <p>
-            Jacques is a music enthusiest who loves to listen to new music. He is also from portland, Maine
+            Jacques is a music enthusiast who loves to listen to new music.
           </p>
           </a>
         </Box>
