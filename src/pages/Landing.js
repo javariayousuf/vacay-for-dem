@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
     margin: "20px"
   },
   hero: {
-    height: "70vh",
+    height: "85vh",
+    width: "100%",
     backgroundImage: `url(
       "https://i.imgur.com/EdSdjKf.png"
     )`,
@@ -53,29 +54,38 @@ const useStyles = makeStyles(theme => ({
     zIndex: "2"
   },
   colorBlock: {
-    backgroundColor: "#97CB8E",
-    height: "300px",
-    width: "450px",
-    position: "relative",
-    top: "-45px",
-    left: "1020px",
-    zIndex: "1"
+    backgroundColor: "#013660",
+    width: "100%"
   },
-  colorBlock2: {
-    backgroundColor: "#97CB8E",
-    height: "355px",
-    width: "460px",
-    position: "relative",
-    top: "-20px",
-    left: "440px",
-    zIndex: "1"
+  topImg: {
+    height: "auto",
+    width: "700px",
+    marginLeft: "100px",
+    marginTop: "100px",
+    marginBottom: "100px"
+  },
+  whiteBox: {
+    width: "auto",
+    marginLeft: "100px",
+    marginRight: "100px",
+    marginTop: "100px",
+    marginBottom: "100px"
+  },
+  textOver: {
+    color: "white",
+    fontSize: "65px",
+    backgroundColor: "#F03265",
+    marginTop: "425px",
+    marginLeft: "-100px",
+    marginBottom:"10px",
+    fontStyle: "italic"
   },
   demImg: {
     height: "auto",
     width: "450px",
-    marginTop: "20px",
-    marginRight: "20px",
-    marginLeft: "20px",
+    marginTop: "50px",
+    marginRight: "20",
+    marginLeft: "50px",
     position: "relative",
     zIndex: "2"
   },
@@ -85,7 +95,8 @@ const useStyles = makeStyles(theme => ({
   },
   missionParagraph: {
     fontWeight: "bold",
-    color: "#ED611D"
+    color: "#F03265",
+    fontSize: "30px"
   },
   signUpButtonTop: {
     marginTop: "15px",
@@ -94,6 +105,23 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     height: "60px",
     width: "150px",
+    fontSize: "17px"
+  },
+  signUpButtonBanner: {
+    backgroundColor: "#F03265",
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    marginLeft: "-100px",
+    height: "60px",
+    width: "150px",
+    fontSize: "17px"
+  },
+  buttonHero: {
+    backgroundColor: "#F03265",
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    height: "60px",
+    width: "200px",
     fontSize: "17px"
   },
   h1: {
@@ -118,6 +146,53 @@ export default function Landing() {
 
   return (
     <div className={classes.root}>
+      <Box className={classes.colorBlock}  style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap"
+        }}>
+        <img
+          className={classes.topImg}
+            src="https://i.imgur.com/9zii9E7.jpg"
+            alt="democracy"
+        />
+        <Box style={{
+          display: "flex",
+          flexDirection: "column",
+          flexWrap: "wrap"}}>
+       
+       <Box><h1 className={classes.textOver}>
+          Empowering voters<br></br>
+          where it matters most.
+        </h1></Box>
+        <a href="/#">
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.signUpButtonBanner}
+            onClick={() => changePopup(true)}
+          >
+            Sign Up
+          </Button>
+        </a>
+        </Box>
+      </Box>
+
+     
+      <Box className={classes.whiteBox}  style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center"
+        }}>
+        <p className={classes.missionParagraph}>
+            Vacay for Democracy sends canvassers to swing states,<br></br> 
+            working to equip voters with the tools and information<br></br> 
+            they need to vote with confidence in the 2020 election.
+        </p>
+      </Box>
+    
+      
       <Box
         className={classes.hero}
         style={{
@@ -127,21 +202,20 @@ export default function Landing() {
           alignItems: "center"
         }}
       >
-        <h1 className={classes.heroTitle}>Vacay for Democracy</h1>
-        <p className={classes.heroText}>
-          Empowering voters where it matters most.
+        <h1 className={classes.heroTitle}>Why Vacay for Democracy?</h1>
+        <p className={classes.heroText}> 🤔
         </p>
-        <a href="/#">
+        <a href="/">
           <Button
             variant="contained"
             color="primary"
-            className={classes.signUpButtonTop}
-            onClick={() => changePopup(true)}
+            className={classes.buttonHero}
           >
-            Sign Up
+            Learn More
           </Button>
         </a>
       </Box>
+      
       <Box
         className={classes.root}
         style={{
@@ -151,7 +225,7 @@ export default function Landing() {
           alignItems: "center"
         }}
       >
-        <Box
+        {/* <Box
           className={classes.heading}
           style={{
             display: "flex",
@@ -172,6 +246,12 @@ export default function Landing() {
           }}
         >
           <div className={classes.textBox}>
+            <p className={classes.missionParagraph}>
+              Vacay for Democracy sends canvassers to swing states, working to
+              equip voters with the tools and information they need to vote with
+              confidence in the 2020 election.
+            </p>
+            
             <h1 className={classes.h1}>Why Vacay for Democracy?</h1>
             <p>
               In 2016, 131.7 million out of 213 million eligible voters in the
@@ -216,14 +296,20 @@ export default function Landing() {
               and make informed decisions that impact their lives and our
               communities.g
             </p>
-            <p className={classes.missionParagraph}>
-              Vacay for Democracy sends canvassers to swing states, working to
-              equip voters with the tools and information they need to vote with
-              confidence in the 2020 election.
-            </p>
           </div>
+        </Box> */}
+
+        <Box className={classes.whiteBox}  style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center"
+          }}>
+          <p className={classes.missionParagraph}>
+              {/* we can add more stuff here if we need */}
+          </p>
         </Box>
-        <Box className={classes.row}>
+        {/* <Box className={classes.row}>
           <a href="/#">
             <Button
               variant="contained"
@@ -234,7 +320,7 @@ export default function Landing() {
               Sign Up
             </Button>
           </a>
-        </Box>
+        </Box> */}
         <Box
           className={classes.row}
           style={{
@@ -245,22 +331,6 @@ export default function Landing() {
             alignItems: "center"
           }}
         >
-          <h1 className={classes.h1}>Our Solution</h1>
-          <img
-            className={classes.demImg}
-            src="https://i.imgur.com/zgqifeF.jpg"
-            alt="training module page"
-          />
-          <img
-            className={classes.demImg}
-            src="https://i.imgur.com/2hUpBt1.jpg"
-            alt="training progress page"
-          />
-          <img
-            className={classes.demImg}
-            src="https://i.imgur.com/Caurj9x.png"
-            alt="testimonial page"
-          />
         </Box>
         <Box className={classes.row}>
           <CapstoneInfo />
