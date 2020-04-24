@@ -119,6 +119,7 @@ export default function Header() {
           alignItems: "center"
         }}
       >
+<<<<<<< HEAD
         <a href="/">
           <img
             className={classes.logo}
@@ -126,6 +127,15 @@ export default function Header() {
             alt="vacay logo"
           />
         </a>
+=======
+      <a href="/">
+        <img
+          className={classes.logo}
+          src="https://i.imgur.com/2sodevs.png"
+          alt="Vacay for Democracy Logo"
+        />
+      </a>
+>>>>>>> header
 
         <Typography>
           <Link href="/" className={classes.linkBox}>
