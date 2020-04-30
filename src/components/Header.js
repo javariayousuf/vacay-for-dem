@@ -128,13 +128,13 @@ export default function Header() {
       </a>
 
         <Typography>
-          <Link href="/" className={classes.linkBox}>
+          <Link href="/about-us" className={classes.linkBox}>
             About Us
           </Link>
           <Link href="/testimonials" className={classes.linkBox}>
             Testimonials
           </Link>
-          <Link href="/about-us" className={classes.linkBox}>
+          <Link href="/" className={classes.linkBox}>
             FAQ
           </Link>
         </Typography>
