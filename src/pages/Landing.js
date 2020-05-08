@@ -204,8 +204,6 @@ export default function Landing() {
         }}
       >
         <h1 className={classes.heroTitle}>Why Vacay for Democracy?</h1>
-        <p className={classes.heroText}> <span role="img" aria-label="thinking face">🤔</span>
-        </p>
         <a href="/">
           <Button
             variant="contained"
