@@ -29,7 +29,6 @@ const useStyles = makeStyles(theme => ({
     padding: 15
   }
 
-
 }));
 
 export default function CapstoneInfo() {
@@ -42,14 +41,6 @@ export default function CapstoneInfo() {
     </Box>
   );
 }
-
-
-
-
-
-
-
-
 
 
 
