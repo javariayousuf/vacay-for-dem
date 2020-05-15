@@ -23,7 +23,6 @@ const useStyles = makeStyles(theme => ({
     margin: 48,
     fontWeight: "bold",
     fontStyle: "italic",
-    fontWeight:"bold"
   },
   cardsDiv: {
     width: "90%",
