@@ -22,14 +22,15 @@ const useStyles = makeStyles(theme => ({
     marginTop: "10px",
     padding: "7px",
     textAlign: "left",
-    fontWeight: "10"
+    fontWeight: "10",
+    color: "white"
   },
   links: {
     color: "inherit",
     textDecoration: "none"
   },
   h2: {
-    color: "#97CB8E"
+    color: "#F03265"
   },
   newsletterField: {
     "&:hover $notchedOutline": {
@@ -66,7 +67,6 @@ export default function Footer() {
             <p>
               Need more information? Subscribe to our monthly newsletter to
               recieve updates
-              <br />
               on upcoming trips and the latest from Vacay for Democracy.
               <br />
             </p>
